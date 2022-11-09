@@ -9,7 +9,14 @@
 * [Batched Payouts](https://github.com/w3f/csv-payouts)
 
 #### My (public) personal projects:
-* [Gekko](https://github.com/lamafab/gekko)
+* [Bitcoin & Monero Compose](https://github.com/lamafab/bitcoin-monero-compose)
+	>  Docker Compose files for running a Bitcoin and/or a Monero node inside a
+	container, including - if desired - VPN configuration (wireguard) to hide
+	the IP address of the nodes.
+* [Gekko (deprecated)](https://github.com/lamafab/gekko)
+	> Gekko offers utilities to parse substrate metadata, generate the
+	corresponding Rust interfaces, create transactions and the ability to
+	encode/decode those transaction.
 
 #### My work at University of London:
 * [Computational Mathematics](https://github.com/world-class/notes/tree/master/level-4/computational-mathematics/student-notes/fabio-lama)
