@@ -6,7 +6,6 @@
 * [Polkadot Registrar Service](https://github.com/w3f/polkadot-registrar-challenger)
 	* Hosted live: https://registrar.web3.foundation/
 * [Polkadot Conformance Testsuite](https://github.com/w3f/polkadot-tests)
-* [Batched Payouts](https://github.com/w3f/csv-payouts)
 
 #### My (public) personal projects:
 * [Bitcoin & Monero Compose](https://github.com/lamafab/bitcoin-monero-compose)
