@@ -1,8 +1,8 @@
 ### Welcome 👋
 
 #### My work at Binance (Trust Wallet):
-* [Implement Taproot and BRC20](https://github.com/trustwallet/wallet-core/pull/3233)
-* [Implement Ordinal NFT inscriptions](https://github.com/trustwallet/wallet-core/pull/3297)
+* [Implement Bitcoin Taproot and BRC20](https://github.com/trustwallet/wallet-core/pull/3233)
+* [Implement Bitcoin Ordinal NFT inscriptions](https://github.com/trustwallet/wallet-core/pull/3297)
 
 #### My (public) work at Web3 Foundation:
 * [Polkadot Specification](https://github.com/w3f/polkadot-spec)
