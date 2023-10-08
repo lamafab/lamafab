@@ -26,5 +26,5 @@
 * [Computational Mathematics](https://github.com/world-class/notes/pull/18)
 * [Discrete Mathematics](https://github.com/world-class/notes/pull/22)
 * [Fundamentals of Computer Science](https://github.com/world-class/notes/pull/23)
-* [Algorithms & Data Structures 1](https://github.com/world-class/notes/pull/25)
+* [Algorithms & Data Structures I](https://github.com/world-class/notes/pull/25)
 
