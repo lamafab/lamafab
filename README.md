@@ -1,6 +1,6 @@
 ### Welcome 👋
 
-#### My work at Binance (Trust Wallet):
+#### My (public) work at Binance (Trust Wallet):
 * [Implement Bitcoin Taproot and BRC20](https://github.com/trustwallet/wallet-core/pull/3233)
 * [Implement Bitcoin Ordinal NFT inscriptions](https://github.com/trustwallet/wallet-core/pull/3297)
 * [Migrate full Bitcoin C++ codebase to Rust](https://github.com/trustwallet/wallet-core/pull/3382)
