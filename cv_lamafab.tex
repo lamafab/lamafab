@@ -1,0 +1,199 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage[margin=1.5cm, top=0pt, bottom=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{paracol}
+\usepackage{fontawesome5}
+
+% Colors
+\definecolor{dark}{RGB}{46, 52, 64}       % Nord0 — header background
+\definecolor{muted}{RGB}{100, 100, 100}   % neutral gray — dates, locations
+\definecolor{rule}{RGB}{129, 161, 193}    % Nord9 — thin decorative rules only
+\definecolor{link}{RGB}{94, 129, 172}     % Nord10 — darker blue for links
+
+% Hyperlinks — blue
+\hypersetup{colorlinks=true, urlcolor=link, linkcolor=link}
+
+% Section formatting — braces around titlerule to scope the color change
+\titleformat{\section}
+    {\large\bfseries\scshape}
+    {}{0em}{}
+    [{\color{rule}\titlerule}]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+\pagestyle{empty}
+
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.1em, label={\small\textbullet}}
+
+% Tech stack subitem
+\newcommand{\tech}[1]{\\\hspace*{0.3em}{\footnotesize\textcolor{muted}{$\hookrightarrow$ #1}}}
+
+% Single employer entry
+\newcommand{\employer}[5]{%
+    \noindent{\textbf{#2}}\\
+    \textit{#1} \hfill {\small #3}\\
+    \textcolor{muted}{\footnotesize #4} \hfill \textcolor{muted}{\footnotesize #5}
+    \vspace{2pt}
+}
+
+% Multi-role employer: company name as header
+\newcommand{\company}[1]{%
+    \noindent{\textbf{#1}}
+    \vspace{2pt}
+}
+
+% Sub-role under a company
+\newcommand{\role}[4]{%
+    \noindent\textit{#1} \hfill {\small #2}\\
+    \textcolor{muted}{\footnotesize #3} \hfill \textcolor{muted}{\footnotesize #4}
+    \vspace{2pt}
+}
+
+% Compact education entry: {degree}{institution}{dates}{duration}
+\newcommand{\pasteducation}[4]{%
+    \noindent{\textbf{#1}}\\
+    \textit{#2}\\
+    {\footnotesize #3} {\footnotesize\textcolor{muted}{· #4}}%
+    \vspace{5pt}
+}
+
+% Compact past employer entry: {role}{company}{location}{dates}{duration}{tech}
+\newcommand{\pastemployer}[6]{%
+    \noindent{\textbf{#1}}\\
+    \textit{#2}, {\footnotesize\textcolor{muted}{#3}}\\
+    {\footnotesize #4} {\footnotesize\textcolor{muted}{· #5}}\\
+    {\footnotesize\textcolor{muted}{$\hookrightarrow$ #6}}%
+    \vspace{5pt}
+}
+
+\begin{document}
+
+%% HEADER
+{\setlength{\fboxsep}{0pt}%
+\noindent\colorbox{dark}{%
+  \parbox[c][3.2cm]{\linewidth}{%
+    \hspace{1.5cm}%
+    \begin{minipage}[c]{0.66\linewidth}
+      \vspace*{6pt}
+      {\Huge\bfseries\color{white} Fabio Lama}\\[4pt]
+      {\small\color{white!55!dark} Senior Software \& Protocol Engineer}\\[3pt]
+      {\footnotesize\color{white!70!dark} Specializing in distributed systems, cryptography, and low-level Rust.}\\[3pt]
+      {\footnotesize\color{white!60!dark}\faMapMarker*\enspace Switzerland}
+      \vspace*{6pt}
+    \end{minipage}%
+    \hfill
+    \parbox[c][3.2cm][c]{2cm}{\centering\includegraphics[width=2cm, height=2cm, keepaspectratio]{profile.jpeg}}%
+    \hspace{1.5cm}
+  }%
+}}
+
+\vspace{8pt}
+
+%% PROFILE
+\section{Profile}
+
+Protocol engineer specializing in distributed systems, cryptography, and low-level Rust.
+Working across both hands-on implementation and high-level architecture; from writing production-ready code to designing cryptographic protocols,
+authoring technical specifications, and seeing those proposals through to implementation.
+
+\[
+\varphi(\cdot) = \begin{cases}
+    \text{\faGithub}   & \href{https://github.com/lamafab}{\texttt{github.com/lamafab}} \\[3pt]
+    \text{\faLinkedin} & \href{https://linkedin.com/in/fabio-lama-47b084187}{\texttt{linkedin.com/in/fabio-lama-47b084187}} \\[3pt]
+    \text{\faEnvelope} & \href{mailto:fabio.lama@pm.me}{\texttt{fabio.lama@pm.me}}
+\end{cases}
+\]
+
+\section{Experience}
+
+\small
+\setlength{\columnsep}{2.4em}
+\columnratio{0.50}
+
+\begin{paracol}{2}
+
+%% RECENT EXPERIENCE
+\begin{leftcolumn}
+
+\employer{Botanix Labs}{Senior Protocol Engineer}{Feb 2025 -- Apr 2026}{Remote · Full-time}{1 yr 3 mos}
+\begin{itemize}
+    \item Implemented consensus-critical state transition logic ensuring cryptographic safety and deterministic execution\tech{CometBFT, ABCI, Rust}
+    \item Worked on bridging mechanism between Bitcoin and Botanix EVM with validated settlement inclusion proofs\tech{Rust, Script, Solidity}
+    \item Implemented dynamic federations with multisig setups, enabling secure key rotations\tech{Frost, DKG, Cryptography}
+    \item Designed and wrote cryptographic protocols \& whitepapers\tech{\LaTeX}
+\end{itemize}
+
+\vfill
+
+\employer{Binance}{Senior Software Engineer}{Apr 2023 -- Apr 2024}{Remote · Full-time}{1 yr 1 mo}
+\begin{itemize}
+    \item Migrated Bitcoin transaction library from C++ to Rust, adding Taproot, Ordinals \& BRC-20 support\tech{C++, Rust, Script}
+    \item Implemented Bitcoin Lightning payments into Trust Wallet\tech{Kotlin, Swift}
+    \item Maintained core wallet infrastructure for transaction building\\and signing\tech{C++, Rust}
+\end{itemize}
+
+\vfill
+
+\company{Web3 Foundation}
+
+\role{Software Engineer}{Sep 2019 -- Mar 2023}{Zug, Switzerland · Hybrid}{3 yrs 7 mos}
+\begin{itemize}
+    \item Wrote the official Polkadot technical protocol specification\tech{\LaTeX, Asciidoc}
+    \item Collaborated with the Research Team on design and implementation\tech{Rust}
+\end{itemize}
+
+\vspace{3pt}
+
+\role{DevOps / SRE (concurrent)}{Apr 2021 -- Mar 2023}{Zug, Switzerland · Hybrid}{2 yrs}
+\begin{itemize}
+    \item Infrastructure deployment and maintenance\tech{Kubernetes, Helm, Docker}
+    \item Developed monitoring software and services\tech{Rust, TypeScript}
+    \item Assigned to on-call schedules
+\end{itemize}
+
+\vfill
+
+\end{leftcolumn}
+
+%% EARLIER CAREER AND EDUCATION
+\begin{rightcolumn}
+
+\vfill
+
+{\normalsize\bfseries\scshape Earlier Career}
+\vspace{5pt}
+
+\pastemployer{System Engineer / Product Management}{highsystem ag}{Zurich}{Mar 2017 -- Aug 2019}{2 yrs 6 mos}{Windows Server, Active Directory, SQL Server, Client management}
+
+\pastemployer{System Engineer}{ESPAS}{Zurich}{Aug 2015 -- Mar 2017}{1 yr 8 mos}{Networking infrastructure, Windows/Linux, Samba, LDAP}
+
+\pastemployer{Software Engineer}{UBS}{Zurich}{Aug 2011 -- Sep 2013}{2 yrs 2 mos}{Java, COBOL (legacy mainframe systems)}
+
+\vspace{4pt}
+\begin{center}
+{\textcolor{muted}{$\cdot \quad \cdot \quad \cdot$}}
+\end{center}
+\vspace{4pt}
+
+{\normalsize\bfseries\scshape Education}
+\vspace{5pt}
+
+\pasteducation{Bachelor's degree, Computer Science}{University of London}{2022 -- 2026}{4 yrs}
+
+\pasteducation{Federal Vocational Diploma (EFZ), Systems \& Networking}{Bildungszentrum Uster}{2015 -- 2019}{4 yrs}
+
+\pasteducation{Federal Vocational Diploma (EFZ), Application Development}{Bildungszentrum Zürichsee BZZ}{2011 -- 2013}{2 yrs}
+
+\end{rightcolumn}
+
+\end{paracol}
+
+\end{document}
